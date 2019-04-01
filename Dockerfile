@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 RUN apt-get update
-RUN apt-get install -y gnupg curl debian-archive-keyring apt-transport-https apt-utils
+RUN apt-get install -y gnupg curl debian-archive-keyring apt-transport-https apt-utils dialog
 
 RUN echo "deb http://download.tarantool.org/tarantool/1.10/debian/ stretch main" > /etc/apt/sources.list.d/tarantool_1_10.list
 RUN echo "deb-src http://download.tarantool.org/tarantool/1.10/debian/ stretch main" >> /etc/apt/sources.list.d/tarantool_1_10.list
