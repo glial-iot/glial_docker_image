@@ -13,6 +13,6 @@ RUN curl -L "https://glial-iot.github.io/glial-stable/PUBLIC.KEY" | apt-key add 
 RUN apt-get update
 RUN apt-get install -y glial
 
-RUN lua /usr/share/tarantool/glial/glial_start.lua
+RUN cd /usr/share/tarantool/glial/ && lua glial_start.lua
 
 EXPOSE 8080
